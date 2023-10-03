@@ -28,7 +28,22 @@ function addR() {
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+        //Maxcols catch
+        if (numCols >= 10)
+        {
+            alert("That's a few too many columns, innit?");
+            return;
+        }
+    
+        //Adding a column
+        var cell;
+        for (x = 0; x < numRows; x++)
+        {
+            cell = grid.rows[x].insertCell(-1);
+            cell.innerHTML = "";
+            cell.onclick = function() { alert('Clicked a table cell'); };
+        }
+        numCols++;
 }
 
 // Remove a row
