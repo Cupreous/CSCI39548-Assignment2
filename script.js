@@ -6,6 +6,14 @@ let grid = document.getElementById('grid');
 
 // Add a row
 function addR() {
+    //Maxrows catch
+    if (numRows >= 10)
+    {
+        alert("That's a few too many rows, innit?");
+        return;
+    }
+
+    //Adding a row
     row = grid.insertRow(-1);
     var cell;
     for ( x = 0; x < numCols; x++)
