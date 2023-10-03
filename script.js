@@ -2,10 +2,28 @@
 let numRows = 2;
 let numCols = 3;
 let colorSelected; 
+let grid = document.getElementById('grid');
 
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    //Maxrows catch
+    if (numRows >= 10)
+    {
+        alert("That's a few too many rows, innit?");
+        return;
+    }
+
+    //Adding a row
+    row = grid.insertRow(-1);
+    var cell;
+    for ( x = 0; x < numCols; x++)
+    {
+         cell = row.insertCell(0);
+         cell.innerHTML = "";
+         cell.onclick = function() { alert('Clicked a table cell'); }; 
+         //above could also be done with .setAttribute("onclick","alert('');"); -- but later we will use a diff function
+    }
+    numRows++;
 }
 
 // Add a column
