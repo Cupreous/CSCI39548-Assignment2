@@ -48,7 +48,15 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    if (numRows >= 1)
+    {
+        grid.deleteRow(-1);
+        numRows--;
+    }
+    else
+    {
+        alert('There are no rows left to remove.');
+    }
 }
 
 // Remove a column
