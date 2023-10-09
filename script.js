@@ -80,6 +80,15 @@ function selectColor(){
     console.log(colorSelected);
 }
 
+function colorOne(e){
+    if (e.target.nodeName.toLowerCase() == "td")
+    {
+        e.target.style.backgroundColor = colorSelected;
+    }
+}
+
+grid.addEventListener("click", colorOne)
+
 // Fill all uncolored cells
 function fillU(){
     alert("Clicked Fill All Uncolored"); // Replace this line with your code.
