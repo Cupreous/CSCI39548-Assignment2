@@ -72,12 +72,26 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+    var currentcell;
+    for (var rownum = 0; rownum < numRows; rownum++) {
+        for(var colnum = 0; colnum < numCols; colnum++) {
+            currentcell =  grid.rows[rownum].cells[colnum];
+            if (currentcell.style.backgroundColor == '') {
+                currentcell.style.backgroundColor = colorSelected;
+            }
+        }
+    }
 }
 
 // Fill all cells
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+    var currentcell;
+    for (var rownum = 0; rownum < numRows; rownum++) {
+        for(var colnum = 0; colnum < numCols; colnum++) {
+            currentcell =  grid.rows[rownum].cells[colnum];
+            currentcell.style.backgroundColor = colorSelected;
+        }
+    }
 }
 
 // Clear all cells
