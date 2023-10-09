@@ -61,7 +61,17 @@ function removeR() {
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    if (numCols >= 1)
+    {
+        for (x = 0; x < numRows; x++)
+        {
+            grid.rows[x].deleteCell(-1);
+        }
+        numCols--;
+    } else
+    {
+        alert("There are no columns left to remove"); 
+    }
 }
 
 // Set global variable for selected color
@@ -69,6 +79,16 @@ function selectColor(){
     colorSelected = document.getElementById("selectedColorId").value;
     console.log(colorSelected);
 }
+
+function colorOne(e){
+    if (e.target.nodeName.toLowerCase() == "td")
+    {
+        e.target.style.backgroundColor = colorSelected;
+    }
+}
+
+grid.addEventListener("click", colorOne)
+
 
 // Fill all uncolored cells
 function fillU(){
