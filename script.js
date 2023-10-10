@@ -20,7 +20,7 @@ function addR() {
     {
          cell = row.insertCell(0);
          cell.innerHTML = "";
-         cell.onclick = function() { alert('Clicked a table cell'); }; 
+         //cell.onclick = function() { alert('Clicked a table cell'); }; 
          //above could also be done with .setAttribute("onclick","alert('');"); -- but later we will use a diff function
     }
     numRows++;
@@ -41,7 +41,7 @@ function addC() {
         {
             cell = grid.rows[x].insertCell(-1);
             cell.innerHTML = "";
-            cell.onclick = function() { alert('Clicked a table cell'); };
+            //cell.onclick = function() { alert('Clicked a table cell'); };
         }
         numCols++;
 }
