@@ -1,13 +1,15 @@
 // Declare global variables
 let numRows = 2;
 let numCols = 3;
+let maxRows = 10;
+let maxCols = 10;
 let colorSelected; 
 let grid = document.getElementById('grid');
 
 // Add a row
 function addR() {
     //Maxrows catch
-    if (numRows >= 10)
+    if (numRows >= maxRows)
     {
         alert("That's a few too many rows, innit?");
         return;
@@ -29,7 +31,7 @@ function addR() {
 // Add a column
 function addC() {
         //Maxcols catch
-        if (numCols >= 10)
+        if (numCols >= maxCols)
         {
             alert("That's a few too many columns, innit?");
             return;
