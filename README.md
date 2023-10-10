@@ -1,8 +1,14 @@
-# grid-maker-starter-code
-This repository is the starter code for Assignment 3 - Grid Maker.
+# grid-maker
+This repository is for the CSCI39548 Assignment 2 - Grid Maker.
+
+### Group
+ - Kazi Mansha (KaziMansha)
+ - Michael Russo (Cupreous)
+ - Anika Sujana (anikasujana)
 
 ### Live Link
-[Website link](https://johnnylaicode.github.io/grid-maker-starter-code/)
+[Website link](
+https://cupreous.github.io/CSCI39548-Assignment2/)
 
 ----------
 ### 1. Use the following process to ***import*** the Assignment 3 starter code repository to your GitHub account as the starter codebase
