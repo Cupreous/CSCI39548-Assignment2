@@ -1,7 +1,8 @@
 // Declare global variables
 let numRows = 2;
 let numCols = 3;
-let colorSelected; 
+let colorSelected;
+let colorConfirmation = true;
 let grid = document.getElementById('grid');
 
 // Add a row
@@ -96,6 +97,15 @@ function colorOne(e){
 }
 
 grid.addEventListener("click", colorOne)
+
+function toggleColorConfirmation(){
+    var toggle = document.getElementById('toggle');
+    if (toggle.checked){
+        colorConfirmation = true;
+    } else{
+        colorConfirmation = false;
+    }
+}
 
 
 // Fill all uncolored cells
