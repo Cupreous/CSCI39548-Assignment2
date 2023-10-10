@@ -141,6 +141,10 @@ function fillAll(){
         alert("Please select a color.");
         return;
     }
+    if (colorConfirmation){
+        if(!confirm("Would you like to color all cells " + colorSelected + "?"))
+        {return;}
+    }
     var currentcell;
     for (var rownum = 0; rownum < numRows; rownum++) {
         for(var colnum = 0; colnum < numCols; colnum++) {
