@@ -83,7 +83,15 @@ function selectColor(){
 function colorOne(e){
     if (e.target.nodeName.toLowerCase() == "td")
     {
-        e.target.style.backgroundColor = colorSelected;
+        if (colorSelected == null || colorSelected == "SELECT")
+        {
+            alert("Please select a color.");
+            return;
+        }
+        if (confirm("Would you like to color this cell " + colorSelected + "?"))
+        {
+            e.target.style.backgroundColor = colorSelected;
+        }
     }
 }
 
