@@ -1,6 +1,6 @@
 // Declare global variables
-let numRows = 2;
-let numCols = 3;
+let numRows = 8;
+let numCols = 8;
 let colorSelected;
 let colorConfirmation = true;
 let grid = document.getElementById('grid');
