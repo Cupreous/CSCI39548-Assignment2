@@ -88,7 +88,10 @@ function colorOne(e){
             alert("Please select a color.");
             return;
         }
-        e.target.style.backgroundColor = colorSelected;
+        if (confirm("Would you like to color this cell " + colorSelected + "?"))
+        {
+            e.target.style.backgroundColor = colorSelected;
+        }
     }
 }
 
