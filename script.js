@@ -1,7 +1,8 @@
 // Declare global variables
 let numRows = 2;
 let numCols = 3;
-let colorSelected; 
+let colorSelected;
+let colorConfirmation = true;
 let grid = document.getElementById('grid');
 
 // Add a row
@@ -83,19 +84,32 @@ function selectColor(){
 function colorOne(e){
     if (e.target.nodeName.toLowerCase() == "td")
     {
-        if (colorSelected == null || colorSelected == "SELECT")
-        {
+        if (colorSelected == null || colorSelected == "SELECT"){
             alert("Please select a color.");
             return;
         }
-        if (confirm("Would you like to color this cell " + colorSelected + "?"))
-        {
+        if (colorConfirmation){
+            if (confirm("Would you like to color this cell " + colorSelected + "?")){
+                e.target.style.backgroundColor = colorSelected;
+            }
+        }
+        else{
             e.target.style.backgroundColor = colorSelected;
         }
+
     }
 }
 
 grid.addEventListener("click", colorOne)
+
+function toggleColorConfirmation(){
+    var toggle = document.getElementById('toggle');
+    if (toggle.checked){
+        colorConfirmation = true;
+    } else{
+        colorConfirmation = false;
+    }
+}
 
 
 // Fill all uncolored cells
@@ -104,6 +118,10 @@ function fillU(){
     {
         alert("Please select a color.");
         return;
+    }
+    if (colorConfirmation){
+        if(!confirm("Would you like to color all uncolored cells " + colorSelected + "?"))
+        {return;}
     }
     var currentcell;
     for (var rownum = 0; rownum < numRows; rownum++) {
@@ -122,6 +140,10 @@ function fillAll(){
     {
         alert("Please select a color.");
         return;
+    }
+    if (colorConfirmation){
+        if(!confirm("Would you like to color all cells " + colorSelected + "?"))
+        {return;}
     }
     var currentcell;
     for (var rownum = 0; rownum < numRows; rownum++) {
