@@ -92,6 +92,11 @@ grid.addEventListener("click", colorOne)
 
 // Fill all uncolored cells
 function fillU(){
+    if (colorSelected == null || colorSelected == "SELECT")
+    {
+        alert("Please select a color.");
+        return;
+    }
     var currentcell;
     for (var rownum = 0; rownum < numRows; rownum++) {
         for(var colnum = 0; colnum < numCols; colnum++) {
