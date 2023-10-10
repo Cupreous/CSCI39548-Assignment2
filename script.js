@@ -110,6 +110,11 @@ function fillU(){
 
 // Fill all cells
 function fillAll(){
+    if (colorSelected == null || colorSelected == "SELECT")
+    {
+        alert("Please select a color.");
+        return;
+    }
     var currentcell;
     for (var rownum = 0; rownum < numRows; rownum++) {
         for(var colnum = 0; colnum < numCols; colnum++) {
