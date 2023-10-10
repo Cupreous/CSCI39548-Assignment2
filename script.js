@@ -83,6 +83,11 @@ function selectColor(){
 function colorOne(e){
     if (e.target.nodeName.toLowerCase() == "td")
     {
+        if (colorSelected == null || colorSelected == "SELECT")
+        {
+            alert("Please select a color.");
+            return;
+        }
         e.target.style.backgroundColor = colorSelected;
     }
 }
