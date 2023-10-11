@@ -13,6 +13,16 @@ function addR() {
         return;
     }
 
+    if (numRows == 0) {
+        var row;
+        row = grid.insertRow(-1);
+        var cell;
+        cell = row.insertCell(0);
+        cell.innerHTML = "";
+        numRows++;
+        numCols++;
+    }
+
     //Adding a row
     row = grid.insertRow(-1);
     var cell;
