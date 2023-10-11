@@ -75,6 +75,11 @@ function removeC() {
             grid.rows[x].deleteCell(-1);
         }
         numCols--;
+        if (numCols == 0) //If nothing left in table, resets numRowss
+        {
+            numRows = 0;
+        }
+        
     } else
     {
         alert("There are no columns left to remove"); 
