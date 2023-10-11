@@ -73,7 +73,9 @@ function removeR() {
         numRows--;
         if (numRows == 0) //If nothing left in table, resets numCols
         {
-            numCols = 0;
+            while (numCols >= 1) {
+                removeC();
+            }
         }
     }
     else {
@@ -90,7 +92,9 @@ function removeC() {
         numCols--;
         if (numCols == 0) //If nothing left in table, resets numRows
         {
-            numRows = 0;
+            while (numRows >= 1) {
+                removeR();
+            }
         }
     } else {
         alert("There are no columns left to remove");
