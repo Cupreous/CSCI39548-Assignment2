@@ -70,6 +70,10 @@ function removeC() {
         if (numCols == 0) //If nothing left in table, resets numRowss
         {
             numRows = 0;
+            if (numCols == 0) //If nothing left in table, resets numRows
+            {
+                numRows = 0;
+            }
         }
 
     } else {
