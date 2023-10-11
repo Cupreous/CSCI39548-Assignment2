@@ -55,6 +55,10 @@ function removeR() {
     {
         grid.deleteRow(-1);
         numRows--;
+        if (numRows == 0) //If nothing left in table, resets numCols
+        {
+            numCols = 0;
+        }
     }
     else
     {
