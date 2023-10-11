@@ -1,6 +1,6 @@
 // Declare global variables
-let numRows = 8;
-let numCols = 8;
+let numRows = 0;
+let numCols = 0;
 let maxRows = 10;
 let maxCols = 10;
 let colorSelected;
@@ -15,6 +15,7 @@ function addR() {
         return;
     }
 
+    //If we start with an empty table
     if (numRows == 0) {
         row = grid.insertRow(-1);
         var cell;
@@ -45,7 +46,7 @@ function addC() {
         return;
     }
 
-    //Specific Case
+    //If we start with an empty table
     if (numCols == 0) {
         row = grid.insertRow(-1);
         var cell;
