@@ -35,6 +35,16 @@ function addC() {
             return;
         }
     
+        //Specific Case
+        if (numCols == 0) {
+        row = grid.insertRow(-1);
+        var cell;
+        cell = row.insertCell(0);
+        cell.innerHTML = "";
+        numRows++;
+        numCols++;
+    }
+
         //Adding a column
         var cell;
         for (x = 0; x < numRows; x++)
