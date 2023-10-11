@@ -14,7 +14,6 @@ function addR() {
     }
 
     if (numRows == 0) {
-        var row;
         row = grid.insertRow(-1);
         var cell;
         cell = row.insertCell(0);
